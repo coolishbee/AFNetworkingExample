@@ -2,7 +2,7 @@
 //  ReqPacket.h
 //  AFNetworkingExample
 //
-//  Created by gamepub on 2021/03/19.
+//  Created by james on 2021/03/19.
 //
 
 #import <Foundation/Foundation.h>

@@ -13,8 +13,6 @@
 		AC18BBAC26030286008BE500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC18BBAB26030286008BE500 /* Assets.xcassets */; };
 		AC18BBAF26030286008BE500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC18BBAD26030286008BE500 /* LaunchScreen.storyboard */; };
 		AC18BBB226030286008BE500 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18BBB126030286008BE500 /* main.m */; };
-		AC18BBBC26030287008BE500 /* AFNetworkingExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18BBBB26030287008BE500 /* AFNetworkingExampleTests.m */; };
-		AC18BBC726030287008BE500 /* AFNetworkingExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18BBC626030287008BE500 /* AFNetworkingExampleUITests.m */; };
 		AC18BBEB26044F93008BE500 /* APIRequestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18BBEA26044F93008BE500 /* APIRequestTableViewController.m */; };
 		AC18BBF826045274008BE500 /* APIResponseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18BBF726045274008BE500 /* APIResponseTableViewController.m */; };
 		AC18BBFE26045439008BE500 /* HttpClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18BBFD26045439008BE500 /* HttpClientManager.m */; };
@@ -52,11 +50,7 @@
 		AC18BBB026030286008BE500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC18BBB126030286008BE500 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC18BBB726030287008BE500 /* AFNetworkingExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AFNetworkingExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC18BBBB26030287008BE500 /* AFNetworkingExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingExampleTests.m; sourceTree = "<group>"; };
-		AC18BBBD26030287008BE500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC18BBC226030287008BE500 /* AFNetworkingExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AFNetworkingExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC18BBC626030287008BE500 /* AFNetworkingExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingExampleUITests.m; sourceTree = "<group>"; };
-		AC18BBC826030287008BE500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC18BBE926044F93008BE500 /* APIRequestTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIRequestTableViewController.h; sourceTree = "<group>"; };
 		AC18BBEA26044F93008BE500 /* APIRequestTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIRequestTableViewController.m; sourceTree = "<group>"; };
 		AC18BBF626045274008BE500 /* APIResponseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIResponseTableViewController.h; sourceTree = "<group>"; };
@@ -114,8 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				AC18BB9E26030285008BE500 /* AFNetworkingExample */,
-				AC18BBBA26030287008BE500 /* AFNetworkingExampleTests */,
-				AC18BBC526030287008BE500 /* AFNetworkingExampleUITests */,
 				AC18BB9D26030285008BE500 /* Products */,
 				436BB5929612E14B524BC09F /* Pods */,
 				FC6E412180A64552ADFCA627 /* Frameworks */,
@@ -148,24 +140,6 @@
 				AC18BC16260456B7008BE500 /* Constants.m */,
 			);
 			path = AFNetworkingExample;
-			sourceTree = "<group>";
-		};
-		AC18BBBA26030287008BE500 /* AFNetworkingExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				AC18BBBB26030287008BE500 /* AFNetworkingExampleTests.m */,
-				AC18BBBD26030287008BE500 /* Info.plist */,
-			);
-			path = AFNetworkingExampleTests;
-			sourceTree = "<group>";
-		};
-		AC18BBC526030287008BE500 /* AFNetworkingExampleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AC18BBC626030287008BE500 /* AFNetworkingExampleUITests.m */,
-				AC18BBC826030287008BE500 /* Info.plist */,
-			);
-			path = AFNetworkingExampleUITests;
 			sourceTree = "<group>";
 		};
 		AC18BC0226045489008BE500 /* UI */ = {
@@ -389,7 +363,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC18BBBC26030287008BE500 /* AFNetworkingExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +370,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC18BBC726030287008BE500 /* AFNetworkingExampleUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,16 +526,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LR5GNR467V;
+				DEVELOPMENT_TEAM = PRPC4C837N;
 				INFOPLIST_FILE = AFNetworkingExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.boxer.AFNetworkingExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamepub.AFNetworkingExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -574,16 +548,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LR5GNR467V;
+				DEVELOPMENT_TEAM = PRPC4C837N;
 				INFOPLIST_FILE = AFNetworkingExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.boxer.AFNetworkingExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamepub.AFNetworkingExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

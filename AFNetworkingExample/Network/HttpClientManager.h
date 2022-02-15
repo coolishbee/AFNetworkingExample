@@ -11,9 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HttpClientManager : NSObject
 {
-    long long timeOffset;
-    NSString *strRegDate;
-    __block NSString *networkStatus;
 }
 
 + (instancetype)getInstance;
