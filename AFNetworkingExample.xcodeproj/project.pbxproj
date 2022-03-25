@@ -20,6 +20,8 @@
 		AC18BC2C260486C3008BE500 /* APIResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18BC2B260486C3008BE500 /* APIResultTableViewController.m */; };
 		AC18BC3226049F4A008BE500 /* RespPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18BC3126049F4A008BE500 /* RespPacket.m */; };
 		AC18BC3826049F5C008BE500 /* ReqPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18BC3726049F5C008BE500 /* ReqPacket.m */; };
+		AC35F90427C8A5F9007D0A84 /* Log.m in Sources */ = {isa = PBXBuildFile; fileRef = AC35F90327C8A5F9007D0A84 /* Log.m */; };
+		AC35F90727C8B319007D0A84 /* APIResultTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC35F90627C8B319007D0A84 /* APIResultTextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		AC18BC3126049F4A008BE500 /* RespPacket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RespPacket.m; sourceTree = "<group>"; };
 		AC18BC3626049F5C008BE500 /* ReqPacket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReqPacket.h; sourceTree = "<group>"; };
 		AC18BC3726049F5C008BE500 /* ReqPacket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReqPacket.m; sourceTree = "<group>"; };
+		AC35F90227C8A5F9007D0A84 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		AC35F90327C8A5F9007D0A84 /* Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Log.m; sourceTree = "<group>"; };
+		AC35F90527C8B319007D0A84 /* APIResultTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIResultTextViewController.h; sourceTree = "<group>"; };
+		AC35F90627C8B319007D0A84 /* APIResultTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIResultTextViewController.m; sourceTree = "<group>"; };
 		ACE231808BB5F916197EA6E4 /* Pods-AFNetworkingExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFNetworkingExample.debug.xcconfig"; path = "Target Support Files/Pods-AFNetworkingExample/Pods-AFNetworkingExample.debug.xcconfig"; sourceTree = "<group>"; };
 		CE89709D0559AE347E214F64 /* Pods-AFNetworkingExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFNetworkingExample.release.xcconfig"; path = "Target Support Files/Pods-AFNetworkingExample/Pods-AFNetworkingExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +133,7 @@
 		AC18BB9E26030285008BE500 /* AFNetworkingExample */ = {
 			isa = PBXGroup;
 			children = (
+				AC35F90127C8A077007D0A84 /* Utils */,
 				AC18BC032604548F008BE500 /* Network */,
 				AC18BC0226045489008BE500 /* UI */,
 				AC18BB9F26030285008BE500 /* AppDelegate.h */,
@@ -151,6 +158,8 @@
 				AC18BBF726045274008BE500 /* APIResponseTableViewController.m */,
 				AC18BC2A260486C3008BE500 /* APIResultTableViewController.h */,
 				AC18BC2B260486C3008BE500 /* APIResultTableViewController.m */,
+				AC35F90527C8B319007D0A84 /* APIResultTextViewController.h */,
+				AC35F90627C8B319007D0A84 /* APIResultTextViewController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -182,6 +191,15 @@
 				AC18BC3126049F4A008BE500 /* RespPacket.m */,
 			);
 			path = ResponseBody;
+			sourceTree = "<group>";
+		};
+		AC35F90127C8A077007D0A84 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AC35F90227C8A5F9007D0A84 /* Log.h */,
+				AC35F90327C8A5F9007D0A84 /* Log.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		FC6E412180A64552ADFCA627 /* Frameworks */ = {
@@ -353,7 +371,9 @@
 				AC18BC17260456B7008BE500 /* Constants.m in Sources */,
 				AC18BC3226049F4A008BE500 /* RespPacket.m in Sources */,
 				AC18BC3826049F5C008BE500 /* ReqPacket.m in Sources */,
+				AC35F90427C8A5F9007D0A84 /* Log.m in Sources */,
 				AC18BBF826045274008BE500 /* APIResponseTableViewController.m in Sources */,
+				AC35F90727C8B319007D0A84 /* APIResultTextViewController.m in Sources */,
 				AC18BBFE26045439008BE500 /* HttpClientManager.m in Sources */,
 				AC18BBB226030286008BE500 /* main.m in Sources */,
 			);

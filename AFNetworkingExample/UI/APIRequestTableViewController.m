@@ -9,6 +9,7 @@
 #import "APIResponseTableViewController.h"
 #import "HttpClientManager.h"
 #import "MBProgressHUD.h"
+#import "APIResultTextViewController.h"
 
 @interface APIRequestTableViewController ()
 
@@ -93,6 +94,19 @@
         }
         case 1:
         {
+            
+            [[HttpClientManager getInstance] getCarriersTracks:@""
+                                                     onSuccess:^(NSString *data)
+            {
+                APIResultTextViewController *resultTVC = [[APIResultTextViewController alloc] init];
+                resultTVC.jsonString = data;
+                
+                [self.navigationController pushViewController:resultTVC animated:YES];
+                [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+            } onFailure:^(NSError * _Nonnull error) {
+                //msg popup!!
+                [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+            }];
 
             break;
         }

@@ -19,8 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
            onSuccess:(void (^)(id data))onSuccess
            onFailure:(void (^)(NSError *error))onFailure;
 
-- (void) getCarriersTracks:(NSString *)packageName
-                 onSuccess:(void (^)(id data))onSuccess
+- (void) getCarriersTracks:(NSString *)carrier_id
+                 onSuccess:(void (^)(NSString *data))onSuccess
                  onFailure:(void (^)(NSError *error))onFailure;
 
 @end
