@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import "Log.h"
 #import "ReqLogin.h"
+#import "RespLogin.h"
 
 @implementation HttpClientManager
 
@@ -24,7 +25,7 @@
 }
 
 - (void) login:(NSString *)type
-     onSuccess:(void (^)(NSString * _Nullable))onSuccess
+     onSuccess:(void (^)(RespLogin * _Nonnull))onSuccess
      onFailure:(void (^)(NSError * _Nonnull))onFailure
 {
     NSString *strUrl = [NSString stringWithFormat:@"%@/auth", localURL];
@@ -32,7 +33,7 @@
     
     ReqLogin* loginBody = [[ReqLogin alloc] init];
     loginBody.login_type = type;
-    loginBody.login_token = @"id-token";
+    loginBody.login_token = @"id_token";
         
     NSString *strLog = [Log objectToJsonString:[loginBody toDictionary]];
     [Log print:@"POST" url:strUrl data:strLog];    
@@ -45,12 +46,17 @@
           parameters:[loginBody toDictionary]
             progress:nil
              success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable resp)
-    {        
+    {
         NSDictionary *respDict = resp;
+        NSError *error;
         NSString *strLog = [Log objectToJsonString:respDict];
-        [Log print:@"200" url:strUrl data:strLog];
         
-        onSuccess(resp);
+        RespLogin* respLogin = [[RespLogin alloc] initWithDictionary:respDict error:&error];
+        NSString *resultCode = [NSString stringWithFormat:@"%ld", (long)respLogin.code];
+        [Log print:resultCode url:strUrl data:strLog];        
+        //NSLog(@"Error log: %@", error);
+        
+        onSuccess(respLogin);
     }failure:^(NSURLSessionDataTask *oper, NSError *error)
     {
         NSLog(@"Error log: %@", error);

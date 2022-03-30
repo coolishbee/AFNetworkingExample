@@ -113,10 +113,14 @@
         case 2:
         {
             [[HttpClientManager getInstance] login:@"GOOGLE"
-                                         onSuccess:^(NSString * _Nonnull data)
+                                         onSuccess:^(RespLogin * _Nonnull data)
             {
+                APIResultTextViewController *resultTVC = [[APIResultTextViewController alloc] init];
+                resultTVC.jsonString = [data toJSONString];
+                
+                [self.navigationController pushViewController:resultTVC animated:YES];
                 [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
-            } onFailure:^(NSError * _Nonnull error) {                
+            } onFailure:^(NSError * _Nonnull error) {
                 [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
             }];
         }

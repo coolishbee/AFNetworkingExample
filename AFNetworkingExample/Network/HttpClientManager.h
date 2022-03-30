@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RespLogin.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)getInstance;
 
 - (void) login:(NSString *)type
-     onSuccess:(void (^)(NSString *data))onSuccess
+     onSuccess:(void (^)(RespLogin *respLogin))onSuccess
      onFailure:(void (^)(NSError *error))onFailure;
 
 - (void) getCarriers:(NSString *)projectId

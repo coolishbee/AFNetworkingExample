@@ -10,6 +10,6 @@
 @implementation Constants
 
 NSString *const baseURL = @"https://apis.tracker.delivery";
-NSString *const localURL = @"http://192.168.12.10:8000";
+NSString *const localURL = @"http://192.168.12.59:8000";
 
 @end
