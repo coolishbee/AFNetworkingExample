@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    mArray = [NSArray arrayWithObjects:@"Get Carriers", @"Get Carriers Tracks", nil];
+    mArray = [NSArray arrayWithObjects:@"Get Carriers", @"Get Carriers Tracks", @"Google Login", nil];
 }
 
 #pragma mark - Table view data source
@@ -110,7 +110,16 @@
 
             break;
         }
-
+        case 2:
+        {
+            [[HttpClientManager getInstance] login:@"GOOGLE"
+                                         onSuccess:^(NSString * _Nonnull data)
+            {
+                [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+            } onFailure:^(NSError * _Nonnull error) {                
+                [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+            }];
+        }
     }
     
 }

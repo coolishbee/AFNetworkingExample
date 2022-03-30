@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Constants : NSObject
 FOUNDATION_EXPORT NSString *const baseURL;
+FOUNDATION_EXPORT NSString *const localURL;
 @end
 
 NS_ASSUME_NONNULL_END

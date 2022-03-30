@@ -6,5 +6,6 @@ target 'AFNetworkingExample' do
 	pod 'AFNetworking', '~> 3.0'
 	pod 'MBProgressHUD', '~> 1.2.0'
 	pod 'Toast', '~> 4.0.0'
+  pod 'JSONModel'
 
 end

@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)getInstance;
 
+- (void) login:(NSString *)type
+     onSuccess:(void (^)(NSString *data))onSuccess
+     onFailure:(void (^)(NSError *error))onFailure;
+
 - (void) getCarriers:(NSString *)projectId
            onSuccess:(void (^)(id data))onSuccess
            onFailure:(void (^)(NSError *error))onFailure;
