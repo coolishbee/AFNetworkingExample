@@ -15,7 +15,7 @@ AFNetworking usage on Objc App
 
 ## ScreenShot
 
-![img]()
+![img](https://github.com/coolishbee/AFNetworkingExample/blob/main/img/screenshot_log.png?raw=true)
 
 ## Backend
 
