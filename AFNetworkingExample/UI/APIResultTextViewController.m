@@ -14,15 +14,18 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    textView = [[UITextView alloc] initWithFrame:self.view.bounds];
-    //[textView setDelegate:self];
-    [textView setText:self.jsonString];
-    [self.view addSubview:textView];
+//    textView = [[UITextView alloc] initWithFrame:self.view.bounds];
+//    [textView setText:self.jsonString];
+//    [self.view addSubview:textView];
+    
+    textLabel = [[UILabel alloc] initWithFrame:self.view.bounds];
+    textLabel.numberOfLines = 0;
+    textLabel.lineBreakMode = NSLineBreakByClipping;
+    textLabel.textAlignment = NSTextAlignmentCenter;
+    textLabel.textColor = [UIColor blackColor];
+    textLabel.backgroundColor = [UIColor whiteColor];
+    [textLabel setText:self.jsonString];
+    [self.view addSubview:textLabel];
 }
-
-//- (BOOL)textView:(UITextView*)textView shouldChangeTextInRange:(NSRange)range replacementText:(nonnull NSString *)text{
-//    NSLog(@"textView callback");
-//    return YES;
-//}
 
 @end

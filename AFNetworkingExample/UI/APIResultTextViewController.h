@@ -10,7 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface APIResultTextViewController : UIViewController {
-    UITextView *textView;
+    //UITextView *textView;
+    UILabel    *textLabel;
 }
 
 @property (nonatomic) NSString  *jsonString;
